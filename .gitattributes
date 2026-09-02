@@ -1,5 +1,5 @@
 # Auto-detect text files and normalize line endings to LF on checkout/commit
 * text=auto
-
 # Or explicitly force LF for all text files:
 # * text eol=lf
+*.mp4 filter=lfs diff=lfs merge=lfs -text

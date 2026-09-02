@@ -550,18 +550,22 @@ a:focus{
 /************************************/
 
 header.main-header{
-	position: relative;
-	background: #0d0f12;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background: transparent;
 	z-index: 100;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	border-bottom: none;
 }
 
 header.main-header .header-sticky{
 	position: relative;
 	width: 100%;
 	top: 0;
-	background: #0d0f12;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+	background: transparent;
+	box-shadow: none;
 	z-index: 100;
 	transition: all 0.3s ease-in-out;
 }
@@ -639,14 +643,15 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 
 .header-action-box{
 	width: 100%;
-	max-width: 1300px;
+	max-width: 1440px;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	padding: 16px 15px;
+	padding: 16px 20px;
 	margin: 0 auto;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	background: linear-gradient(180deg, rgba(6, 8, 12, 0.85) 0%, rgba(6, 8, 12, 0.45) 75%, transparent 100%);
 }
 
 .navbar-brand{
@@ -772,7 +777,7 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 
 .main-menu{
 	width: 100%;
-	background: transparent;
+	background: linear-gradient(180deg, rgba(6, 8, 12, 0.45) 0%, transparent 100%);
 	padding: 8px 0 14px 0;
 }
 
@@ -796,42 +801,44 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	align-items: center;
 	display: inline-flex;
 	flex-wrap: nowrap;
-	background: rgba(20, 24, 33, 0.88);
-	backdrop-filter: blur(24px);
-	-webkit-backdrop-filter: blur(24px);
-	border: 1px solid rgba(255, 177, 32, 0.22);
+	background: rgba(10, 13, 18, 0.94);
+	backdrop-filter: blur(28px);
+	-webkit-backdrop-filter: blur(28px);
+	border: 1px solid rgba(255, 177, 32, 0.35);
 	border-radius: 9999px;
 	padding: 5px 8px;
-	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	box-shadow: 0 16px 45px rgba(0, 0, 0, 0.85), 0 2px 8px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.15);
 	gap: 2px;
 	list-style: none;
 	margin: 0;
-	transition: border-color 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .main-menu .nav-menu-wrapper > ul:hover{
-	border-color: rgba(255, 177, 32, 0.4);
+	border-color: rgba(255, 177, 32, 0.6);
+	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 177, 32, 0.25);
 }
 
-/* Matching Info & Contact Capsule - Aligned to Right */
+/* Matching Info & Contact Capsule - High Visibility */
 .nav-info-capsule{
 	display: inline-flex;
 	align-items: center;
-	background: rgba(20, 24, 33, 0.88);
-	backdrop-filter: blur(24px);
-	-webkit-backdrop-filter: blur(24px);
-	border: 1px solid rgba(255, 177, 32, 0.22);
+	background: rgba(10, 13, 18, 0.94);
+	backdrop-filter: blur(28px);
+	-webkit-backdrop-filter: blur(28px);
+	border: 1px solid rgba(255, 177, 32, 0.35);
 	border-radius: 9999px;
 	padding: 5px 16px;
-	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	box-shadow: 0 16px 45px rgba(0, 0, 0, 0.85), 0 2px 8px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.15);
 	gap: 14px;
 	flex-shrink: 0;
 	margin-left: auto;
-	transition: border-color 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .nav-info-capsule:hover{
-	border-color: rgba(255, 177, 32, 0.4);
+	border-color: rgba(255, 177, 32, 0.6);
+	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 177, 32, 0.25);
 }
 
 .capsule-sale a{
@@ -839,15 +846,15 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	align-items: center;
 	gap: 6px;
 	background: linear-gradient(135deg, #FFB120 0%, #F59E0B 100%);
-	color: #0d0f12;
+	color: #000000;
 	font-weight: 800;
-	font-size: 12.5px;
+	font-size: 13px;
 	letter-spacing: 0.4px;
-	padding: 7px 15px;
+	padding: 7px 16px;
 	border-radius: 9999px;
 	text-decoration: none;
 	transition: all 0.25s ease;
-	box-shadow: 0 3px 12px rgba(255, 177, 32, 0.35);
+	box-shadow: 0 4px 15px rgba(255, 177, 32, 0.45);
 	white-space: nowrap;
 }
 
@@ -859,13 +866,13 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	background: #ffffff;
 	color: #0d0f12;
 	transform: translateY(-1px);
-	box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+	box-shadow: 0 4px 18px rgba(255, 255, 255, 0.4);
 }
 
 .capsule-divider{
 	width: 1px;
-	height: 28px;
-	background: rgba(255, 255, 255, 0.12);
+	height: 30px;
+	background: rgba(255, 255, 255, 0.18);
 }
 
 .capsule-contact{
@@ -879,9 +886,9 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	width: 34px;
 	height: 34px;
 	border-radius: 50%;
-	background: rgba(255, 177, 32, 0.12);
-	border: 1px solid rgba(255, 177, 32, 0.3);
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	background: rgba(255, 177, 32, 0.18);
+	border: 1px solid rgba(255, 177, 32, 0.45);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -893,7 +900,7 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 
 .nav-info-capsule:hover .capsule-phone-icon{
 	transform: rotate(12deg) scale(1.08);
-	background: rgba(255, 177, 32, 0.22);
+	background: rgba(255, 177, 32, 0.3);
 }
 
 .capsule-contact-content{
@@ -903,25 +910,27 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 }
 
 .capsule-contact-content p{
-	font-size: 10px;
+	font-size: 10.5px;
 	font-weight: 800;
 	line-height: 1em;
-	color: #94a3b8;
+	color: #cbd5e1;
 	text-transform: uppercase;
-	letter-spacing: 0.6px;
+	letter-spacing: 0.8px;
 	margin: 0 0 2px 0;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .capsule-contact-content .phone-item a{
 	font-family: var(--accent-font), 'Inter', sans-serif;
-	font-size: 13px;
-	font-weight: 700;
+	font-size: 13.5px;
+	font-weight: 800;
 	line-height: 1.25em;
 	color: #ffffff;
 	text-decoration: none;
 	transition: color 0.2s ease;
 	display: block;
 	white-space: nowrap;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .capsule-contact-content .phone-item a:hover{
@@ -936,30 +945,32 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 
 .main-menu ul .nav-item .nav-link{
 	font-size: 13.5px;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1.2em;
-	letter-spacing: 0.2px;
-	text-transform: capitalize;
-	color: #f1f5f9;
+	letter-spacing: 0.3px;
+	text-transform: uppercase;
+	color: #ffffff;
 	background: transparent;
 	border-radius: 9999px;
-	padding: 8px 15px !important;
+	padding: 8px 16px !important;
 	transition: all 0.22s ease-in-out;
 	display: flex;
 	align-items: center;
 	white-space: nowrap;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* First active item pill style */
 .main-menu ul .nav-item:first-child .nav-link{
 	background: linear-gradient(135deg, #FFB120 0%, #F59E0B 100%);
-	color: #0d0f12;
+	color: #000000;
 	font-weight: 800;
-	box-shadow: 0 4px 14px rgba(255, 177, 32, 0.35);
+	box-shadow: 0 4px 16px rgba(255, 177, 32, 0.45);
+	text-shadow: none;
 }
 
 .main-menu ul .nav-item .nav-link:hover{
-	background: rgba(255, 177, 32, 0.12);
+	background: rgba(255, 177, 32, 0.18);
 	color: #FFB120;
 }
 
@@ -970,12 +981,12 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	font-size: 11px;
 	vertical-align: middle;
 	margin-left: 6px;
-	color: rgba(255, 255, 255, 0.5);
-	transition: color 0.22s ease;
+	color: #FFB120;
+	transition: transform 0.22s ease;
 }
 
 .main-menu ul .nav-item.submenu > a:hover:after{
-	color: #FFB120;
+	transform: translateY(1px);
 }
 
 .nav-circle-arrow-btn{
@@ -1855,7 +1866,7 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 }
 
 .hero-box{
-	padding: 175px 0;
+	padding: 235px 0 160px 0;
 }
 
 .hero-content .section-title p{
@@ -1932,6 +1943,31 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	font-weight: 600;
 	color: var(--white-color);
 	margin: 0;
+}
+
+/* Local Video Popup Modal */
+.mfp-video-popup .mfp-content{
+	max-width: 920px !important;
+	padding: 20px 15px;
+	margin: 0 auto;
+}
+
+.video-popup-container{
+	position: relative;
+	background: #000000;
+	border-radius: 14px;
+	border: 1px solid rgba(255, 177, 32, 0.4);
+	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 177, 32, 0.2);
+	overflow: hidden;
+}
+
+.video-popup-container video{
+	display: block;
+	width: 100%;
+	max-height: 75vh;
+	object-fit: contain;
+	background: #000000;
+	outline: none;
 }
 
 .find-parts-form-box{
