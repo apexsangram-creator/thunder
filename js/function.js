@@ -471,4 +471,29 @@
 		});
 	}
 
+	/* Showcase Video Player Interaction */
+	const showcaseVideo = document.getElementById('showcaseVideoPlayer');
+	const showcasePlayBtn = document.getElementById('showcasePlayBtn');
+
+	if (showcaseVideo && showcasePlayBtn) {
+		showcasePlayBtn.addEventListener('click', function () {
+			if (showcaseVideo.paused) {
+				showcaseVideo.play();
+				showcasePlayBtn.classList.add('is-playing');
+			}
+		});
+
+		showcaseVideo.addEventListener('play', function () {
+			showcasePlayBtn.classList.add('is-playing');
+		});
+
+		showcaseVideo.addEventListener('pause', function () {
+			showcasePlayBtn.classList.remove('is-playing');
+		});
+
+		showcaseVideo.addEventListener('ended', function () {
+			showcasePlayBtn.classList.remove('is-playing');
+		});
+	}
+
 })(jQuery);
