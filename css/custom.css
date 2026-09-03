@@ -415,8 +415,18 @@ a:focus{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	max-width: 66px;
+	width: 52px;
+	max-width: 52px;
 	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#loading-icon img{
+	width: 100%;
+	height: auto;
+	display: block;
 }
 
 @keyframes rotate-loading{
@@ -2716,7 +2726,7 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 }
 
 .brand-item{
-	width: calc(25% - 15px);
+	width: calc((100% - 40px) / 3);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -2724,6 +2734,11 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	background-color: var(--bg-color);
 	border-radius: 20px;
 	overflow: hidden;
+	transition: all 0.4s ease-in-out;
+}
+
+.brand-item:hover{
+	transform: translateY(-5px);
 }
 
 .brand-item-image{
@@ -2739,7 +2754,15 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 .brand-item-image figure img{
 	width: 100%;
 	max-width: 245px;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
 	border-radius: 10px;
+	margin: 0 auto;
+	transition: all 0.4s ease-in-out;
+}
+
+.brand-item:hover .brand-item-image figure img{
+	transform: scale(1.05);
 }
 
 .brand-item-content{
@@ -7611,7 +7634,7 @@ ul.view-order-product-info-list li span{
 	}
 
 	.brand-item{
-		width: calc(25% - 7.5px);
+		width: calc((100% - 20px) / 3);
 	}
 
 	.brand-item-image{

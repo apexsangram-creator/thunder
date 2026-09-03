@@ -52,7 +52,12 @@
     <div class="preloader">
       <div class="loading-container">
         <div class="loading"></div>
-        <div id="loading-icon"><img src="images/loader.svg" alt="" /></div>
+        <div id="loading-icon">
+          <img
+            src="images/thunder-rode-logo.png"
+            alt="Thunder-Rode Motorcycle Accessories"
+          />
+        </div>
       </div>
     </div>
     <!-- Preloader End -->
@@ -835,55 +840,72 @@
               <div class="find-parts-box">
                 <!-- Find Parts Box Title Start -->
                 <div class="find-parts-box-title wow fadeInUp">
-                  <h2>Find Parts For Your Vehicle</h2>
+                  <h2>Find Gear For Your Ride</h2>
                 </div>
                 <!-- Find Parts Box Title End -->
 
                 <!-- Find Parts Form Start -->
                 <div class="find-parts-form wow fadeInUp" data-wow-delay="0.2s">
-                  <form id="findParts">
+                  <form id="findParts" action="products.html" method="GET">
                     <select
-                      name="manufacturer"
+                      name="category"
                       class="form-control form-select"
-                      id="manufacturer"
+                      id="gearCategory"
                       required=""
                     >
                       <option value="" disabled="" selected="">
-                        Select Manufacturer
+                        Select Category
                       </option>
-                      <option value="toyota">Toyota</option>
-                      <option value="hyundai">Hyundai</option>
-                      <option value="honda">Honda</option>
-                      <option value="tata">Tata</option>
+                      <option value="mens-gear">Men's Motorcycle Gear</option>
+                      <option value="womens-gear">Women's Motorcycle Gear</option>
+                      <option value="biker-accessories">Biker Accessories &amp; Jewelry</option>
+                      <option value="leather-apparel">Leather Jackets &amp; Vests</option>
+                      <option value="helmets-eyewear">Helmets &amp; Riding Eyewear</option>
+                      <option value="pre-loved">Pre-Loved Vintage Gear</option>
+                      <option value="route-66">Route 66 Collectibles</option>
+                      <option value="services">Leather Services &amp; Repair</option>
                     </select>
 
                     <select
-                      name="model"
+                      name="gear_type"
                       class="form-control form-select"
-                      id="model"
+                      id="gearType"
                       required=""
                     >
                       <option value="" disabled="" selected="">
-                        Select Model
+                        Select Gear Type
                       </option>
-                      <option value="fortuner">Fortuner</option>
-                      <option value="glanza">Glanza</option>
-                      <option value="camry">Camry</option>
+                      <option value="leather-jackets">Leather Jackets</option>
+                      <option value="leather-vests">Leather Vests &amp; Cuts</option>
+                      <option value="chaps-pants">Chaps &amp; Riding Pants</option>
+                      <option value="shirts-hoodies">T-Shirts &amp; Hoodies</option>
+                      <option value="helmets-headgear">DOT Helmets &amp; Head Gear</option>
+                      <option value="gloves-raingear">Riding Gloves &amp; Rain Gear</option>
+                      <option value="belts-buckles">Biker Belts &amp; Buckles</option>
+                      <option value="bags-luggage">Saddlebags &amp; Luggage</option>
+                      <option value="wallets-purses">Wallets &amp; CCW Purses</option>
+                      <option value="patches-bells">Patches, Pins &amp; Bells</option>
                     </select>
 
                     <select
-                      name="variant"
+                      name="size_style"
                       class="form-control form-select"
-                      id="variant"
+                      id="gearSize"
                       required=""
                     >
                       <option value="" disabled="" selected="">
-                        Select Variant
+                        Select Size / Style
                       </option>
-                      <option value="4x2_mt">4X2 MT</option>
-                      <option value="4x2_at">4x2 AT</option>
-                      <option value="4x4_mt">4x4 MT</option>
-                      <option value="4x4_at">4x4 AT</option>
+                      <option value="s">Small (S)</option>
+                      <option value="m">Medium (M)</option>
+                      <option value="l">Large (L)</option>
+                      <option value="xl">X-Large (XL)</option>
+                      <option value="2xl">2X-Large (2XL)</option>
+                      <option value="3xl">3X-Large (3XL)</option>
+                      <option value="4xl-5xl">4XL - 5XL Big &amp; Tall</option>
+                      <option value="cruiser-touring">Cruiser &amp; Touring</option>
+                      <option value="classic-route66">Route 66 Heritage</option>
+                      <option value="universal">Universal / All Sizes</option>
                     </select>
 
                     <div class="form-button">
@@ -2058,7 +2080,10 @@
                 <div class="brand-item-image">
                   <a href="products.html">
                     <figure>
-                      <img src="images/our-brand-item-image-1.svg" alt="" />
+                      <img
+                        src="images/brands/bristol-leather-montreal-canada-aviator-jacket-1.webp"
+                        alt="Bristol Leather Montreal Canada Aviator Jacket"
+                      />
                     </figure>
                   </a>
                 </div>
@@ -2073,7 +2098,10 @@
                 <div class="brand-item-image">
                   <a href="products.html">
                     <figure>
-                      <img src="images/our-brand-item-image-2.svg" alt="" />
+                      <img
+                        src="images/brands/ladies-tank-top-burnout-kingman-arizona-route66-1.webp"
+                        alt="Ladies Tank Top Burnout Kingman Arizona Route 66"
+                      />
                     </figure>
                   </a>
                 </div>
@@ -2088,7 +2116,10 @@
                 <div class="brand-item-image">
                   <a href="products.html">
                     <figure>
-                      <img src="images/our-brand-item-image-3.svg" alt="" />
+                      <img
+                        src="images/brands/mens-biker-belts-kingman-az-route6.jpg"
+                        alt="Mens Biker Belts Kingman AZ Route 66"
+                      />
                     </figure>
                   </a>
                 </div>
@@ -2103,7 +2134,10 @@
                 <div class="brand-item-image">
                   <a href="products.html">
                     <figure>
-                      <img src="images/our-brand-item-image-4.svg" alt="" />
+                      <img
+                        src="images/brands/mens-leather-vests-kingman-az-route66.jpg"
+                        alt="Mens Leather Vests Kingman AZ Route 66"
+                      />
                     </figure>
                   </a>
                 </div>
@@ -2118,7 +2152,10 @@
                 <div class="brand-item-image">
                   <a href="products.html">
                     <figure>
-                      <img src="images/our-brand-item-image-5.svg" alt="" />
+                      <img
+                        src="images/brands/mens-long-sleeves-kingman-arizona-route66-1.webp"
+                        alt="Mens Long Sleeves Kingman Arizona Route 66"
+                      />
                     </figure>
                   </a>
                 </div>
@@ -2133,42 +2170,15 @@
                 <div class="brand-item-image">
                   <a href="products.html">
                     <figure>
-                      <img src="images/our-brand-item-image-6.svg" alt="" />
+                      <img
+                        src="images/brands/mens-racer-jacket-with-gun-pockets-naked-cowhide-leather-2.webp"
+                        alt="Mens Racer Jacket With Gun Pockets Naked Cowhide Leather"
+                      />
                     </figure>
                   </a>
                 </div>
                 <div class="brand-item-content">
                   <h3><span class="counter">200</span>+ Products</h3>
-                </div>
-              </div>
-              <!-- Brand Item End -->
-
-              <!-- Brand Item Start -->
-              <div class="brand-item">
-                <div class="brand-item-image">
-                  <a href="products.html">
-                    <figure>
-                      <img src="images/our-brand-item-image-7.svg" alt="" />
-                    </figure>
-                  </a>
-                </div>
-                <div class="brand-item-content">
-                  <h3><span class="counter">20</span>+ Products</h3>
-                </div>
-              </div>
-              <!-- Brand Item End -->
-
-              <!-- Brand Item Start -->
-              <div class="brand-item">
-                <div class="brand-item-image">
-                  <a href="products.html">
-                    <figure>
-                      <img src="images/our-brand-item-image-8.svg" alt="" />
-                    </figure>
-                  </a>
-                </div>
-                <div class="brand-item-content">
-                  <h3><span class="counter">35</span>+ Products</h3>
                 </div>
               </div>
               <!-- Brand Item End -->
@@ -2193,11 +2203,11 @@
                   >Frequently Asked Questions</span
                 >
                 <h2 class="text-anime-style-3" data-cursor="-opaque">
-                  Everything you need know about auto parts
+                  Everything you need know about Thunder Rode
                 </h2>
                 <p class="wow fadeInUp" data-wow-delay="0.2s">
-                  Find quick answers to the most common questions about our auto
-                  shipping, returns to make your shopping experience.
+                  Find quick answers to the most common questions about our
+                  service, shipping, returns to make your shopping experience.
                 </p>
               </div>
               <!-- Section Title End -->
@@ -2225,7 +2235,7 @@
                     aria-expanded="false"
                     aria-controls="collapse1"
                   >
-                    01. How do I find the right part for my vehicle?
+                    01. Do you offer leather restoration in Kingman, AZ?
                   </button>
                 </h2>
                 <div
@@ -2237,9 +2247,9 @@
                 >
                   <div class="accordion-body">
                     <p>
-                      Find quick answers to the most common questions about our
-                      auto parts, orders, shipping &amp; returns to make your
-                      shopping experience.
+                      Yes. We restore faded, dried, or cracked leather jackets,
+                      vests, chaps, and pants for riders in Kingman and across
+                      Mohave County.
                     </p>
                   </div>
                 </div>
@@ -2257,7 +2267,7 @@
                     aria-expanded="true"
                     aria-controls="collapse2"
                   >
-                    02. How long does delivery take?
+                    02. What does leather restoration include?
                   </button>
                 </h2>
                 <div
@@ -2269,9 +2279,9 @@
                 >
                   <div class="accordion-body">
                     <p>
-                      Find quick answers to the most common questions about our
-                      auto parts, orders, shipping &amp; returns to make your
-                      shopping experience.
+                      Deep clean, re-condition, re-dye when needed, and finish
+                      conditioning to bring back color, softness, and
+                      protection.
                     </p>
                   </div>
                 </div>
@@ -2289,7 +2299,7 @@
                     aria-expanded="false"
                     aria-controls="collapse3"
                   >
-                    03. What is your return policy?
+                    03. Do you really offer free oiling and cleaning?
                   </button>
                 </h2>
                 <div
@@ -2301,9 +2311,8 @@
                 >
                   <div class="accordion-body">
                     <p>
-                      Find quick answers to the most common questions about our
-                      auto parts, orders, shipping &amp; returns to make your
-                      shopping experience.
+                      Yes. Leather goods purchased in our shop get free oiling
+                      and cleaning twice yearly for as long as you own them.
                     </p>
                   </div>
                 </div>
@@ -2321,7 +2330,7 @@
                     aria-expanded="false"
                     aria-controls="collapse4"
                   >
-                    04. Are your auto parts genuine?
+                    04. What leather items do you repair?
                   </button>
                 </h2>
                 <div
@@ -2333,9 +2342,9 @@
                 >
                   <div class="accordion-body">
                     <p>
-                      Find quick answers to the most common questions about our
-                      auto parts, orders, shipping &amp; returns to make your
-                      shopping experience.
+                      Jackets, vests, pants, shirts, handbags, wallets, belts,
+                      motorcycle bags, holsters, knife sheaths, spur straps,
+                      halters, rifle slings, and more.
                     </p>
                   </div>
                 </div>
@@ -2353,7 +2362,7 @@
                     aria-expanded="false"
                     aria-controls="collapse5"
                   >
-                    05. What payment methods do you accept?
+                    05. Can you repair nylon straps on bags and packs?
                   </button>
                 </h2>
                 <div
@@ -2365,9 +2374,8 @@
                 >
                   <div class="accordion-body">
                     <p>
-                      Find quick answers to the most common questions about our
-                      auto parts, orders, shipping &amp; returns to make your
-                      shopping experience.
+                      Yes. We repair broken or torn nylon straps on backpacks,
+                      travel bags, and similar gear.
                     </p>
                   </div>
                 </div>
@@ -2481,7 +2489,7 @@
                 >Customer Reviews</span
               >
               <h2 class="text-anime-style-3" data-cursor="-opaque">
-                Trusted Reviews From Happy Drivers
+                Trusted Reviews From Happy Customers
               </h2>
             </div>
             <!-- Section Title End -->
@@ -2783,8 +2791,8 @@
                     <div class="contact-now-info-item-content">
                       <h3>Email Address</h3>
                       <p>
-                        <a href="mailto:info@dominname.com"
-                          >info@dominname.com</a
+                        <a href="mailto:sales@thunder-rode.com"
+                          >sales@thunder-rode.com</a
                         >
                       </p>
                     </div>
@@ -2798,7 +2806,7 @@
                     </div>
                     <div class="contact-now-info-item-content">
                       <h3>Phone Number</h3>
-                      <p><a href="tel:123456789">123-456-789</a></p>
+                      <p><a href="tel:123456789">(928) 542-6059</a></p>
                     </div>
                   </div>
                   <!-- Contact Now Info Item End -->
@@ -2928,116 +2936,7 @@
     <!-- Our Inquiry Section End -->
 
     <!-- Our Blog Section Start -->
-    <div class="our-blog">
-      <div class="container">
-        <div class="row section-row align-items-center">
-          <div class="col-xl-6">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <span class="section-sub-title wow fadeInUp">Latest Blog</span>
-              <h2 class="text-anime-style-3" data-cursor="-opaque">
-                Expert Automotive Tips And Trends
-              </h2>
-            </div>
-            <!-- Section Title End -->
-          </div>
 
-          <div class="col-xl-6">
-            <!-- Section Button Start -->
-            <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-              <a href="blog.html" class="btn-default btn-border">All Blog</a>
-            </div>
-            <!-- Section Button End -->
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- Post Item List Start -->
-            <div class="post-item-list">
-              <!-- Post Item Start -->
-              <div class="post-item wow fadeInUp">
-                <div class="post-featured-image">
-                  <a href="blog-single.html" data-cursor-text="View">
-                    <figure class="image-anime">
-                      <img src="images/post-1.jpg" alt="" />
-                    </figure>
-                  </a>
-                </div>
-                <div class="post-item-body">
-                  <div class="post-item-content">
-                    <h2>
-                      <a href="blog-single.html"
-                        >How to Choose the Right Auto Parts for Your Car</a
-                      >
-                    </h2>
-                  </div>
-                  <div class="post-item-btn">
-                    <a href="blog-single.html" class="readmore-btn"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- Post Item End -->
-
-              <!-- Post Item Start -->
-              <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-                <div class="post-featured-image">
-                  <a href="blog-single.html" data-cursor-text="View">
-                    <figure class="image-anime">
-                      <img src="images/post-2.jpg" alt="" />
-                    </figure>
-                  </a>
-                </div>
-                <div class="post-item-body">
-                  <div class="post-item-content">
-                    <h2>
-                      <a href="blog-single.html"
-                        >Simple Vehicle Maintenance Tips Every Month</a
-                      >
-                    </h2>
-                  </div>
-                  <div class="post-item-btn">
-                    <a href="blog-single.html" class="readmore-btn"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- Post Item End -->
-
-              <!-- Post Item Start -->
-              <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
-                <div class="post-featured-image">
-                  <a href="blog-single.html" data-cursor-text="View">
-                    <figure class="image-anime">
-                      <img src="images/post-3.jpg" alt="" />
-                    </figure>
-                  </a>
-                </div>
-                <div class="post-item-body">
-                  <div class="post-item-content">
-                    <h2>
-                      <a href="blog-single.html"
-                        >Signs Your Car Battery Needs Replacement</a
-                      >
-                    </h2>
-                  </div>
-                  <div class="post-item-btn">
-                    <a href="blog-single.html" class="readmore-btn"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- Post Item End -->
-            </div>
-            <!-- Post Item List End -->
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Our Blog Section End -->
 
     <!-- Main Footer Start -->
@@ -3094,28 +2993,30 @@
             <div class="footer-links-box">
               <!-- Footer Links Start -->
               <div class="footer-links">
-                <h2>Quick Links</h2>
+                <h2>Navigation</h2>
                 <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="products.html">Shop</a></li>
-                  <li><a href="products.html">Categories</a></li>
-                  <li><a href="#">Deals</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="#">Sale</a></li>
+                  <li><a href="#">Pre-Loved</a></li>
+                  <li><a href="#">Motorcycle Gear</a></li>
+                  <li><a href="#">Biker Accessories</a></li>
+                  <li><a href="#">Men's Motorcycle Gear</a></li>
+                  <li><a href="#">Women's Motorcycle Gear</a></li>
+                  <li><a href="#">Bikefest</a></li>
                 </ul>
               </div>
               <!-- Footer Links End -->
 
               <!-- Footer Links Start -->
               <div class="footer-links">
-                <h2>Categories</h2>
+                <h2>Services</h2>
                 <ul>
-                  <li><a href="products.html">Engine Parts</a></li>
-                  <li><a href="products.html">Brake System</a></li>
-                  <li><a href="products.html">Suspension</a></li>
-                  <li><a href="products.html">Electrical Parts</a></li>
-                  <li><a href="products.html">Car Accessories</a></li>
-                  <li><a href="products.html">Tools &amp; Equipment</a></li>
+                  <li><a href="#">All Services</a></li>
+                  <li><a href="#">Leather Restoration Services</a></li>
+                  <li><a href="#">Leather Repair Services</a></li>
+                  <li><a href="#">Custom Leather Goods</a></li>
+                  <li><a href="#">Nylon Strap Repair</a></li>
+                  <li><a href="#">Concealed Carry Pocket</a></li>
+                  <li><a href="#">Patch Sewing</a></li>
                 </ul>
               </div>
               <!-- Footer Links End -->
@@ -3149,14 +3050,14 @@
                   <ul>
                     <li>
                       <img src="images/icon-mail-accent.svg" alt="" /><a
-                        href="mailto:support@yourbrand.com"
-                        >support@yourbrand.com</a
+                        href="mailto:sales@thunder-rode.com"
+                        >sales@thunder-rode.com</a
                       >
                     </li>
                     <li>
                       <img src="images/icon-phone-accent.svg" alt="" /><a
                         href="tel:123456789"
-                        >123-456-789</a
+                        >(928) 542-6059</a
                       >
                     </li>
                   </ul>

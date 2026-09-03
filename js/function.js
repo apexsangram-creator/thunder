@@ -345,4 +345,87 @@
 		input.value = String(Math.max(1, +input.value - 1)).padStart(2, "0");
 	});
 
+	/* Gear Finder Dependent Dropdowns */
+	var $gearCategory = $('#gearCategory');
+	var $gearType = $('#gearType');
+	if ($gearCategory.length && $gearType.length) {
+		var gearOptionsByCategory = {
+			'mens-gear': [
+				{ value: 'leather-jackets', text: "Men's Leather Jackets" },
+				{ value: 'leather-vests', text: "Men's Leather Vests & Cuts" },
+				{ value: 'textile-jackets', text: "Men's Textile Jackets" },
+				{ value: 'chaps-pants', text: "Men's Chaps & Leather Pants" },
+				{ value: 'shirts-hoodies', text: "Men's T-Shirts & Hoodies" },
+				{ value: 'long-sleeves', text: "Men's Long Sleeves" },
+				{ value: 'rain-gear', text: "Men's Rain Gear" }
+			],
+			'womens-gear': [
+				{ value: 'leather-jackets', text: "Women's Leather Jackets" },
+				{ value: 'leather-vests', text: "Women's Leather Vests" },
+				{ value: 'textile-jackets', text: "Women's Textile Jackets" },
+				{ value: 'chaps-pants', text: "Women's Chaps & Pants" },
+				{ value: 'shirts-hoodies', text: "Women's Tee Shirts" },
+				{ value: 'long-sleeves', text: "Women's Long Sleeves" },
+				{ value: 'handbags', text: "Biker Handbags & CCW Bags" }
+			],
+			'biker-accessories': [
+				{ value: 'headgear-bandanas', text: "Head Gear, Caps & Bandanas" },
+				{ value: 'eyewear-goggles', text: "Sunglasses & Riding Goggles" },
+				{ value: 'biker-jewelry', text: "Biker Rings & Jewelry" },
+				{ value: 'biker-bells', text: "Guardian & Biker Bells" },
+				{ value: 'belts-buckles', text: "Cactus Belts & Buckles" },
+				{ value: 'wallets-chains', text: "Leather Wallets & Chains" },
+				{ value: 'patches-pins', text: "Biker Patches & Pins" },
+				{ value: 'whips-selfdefense', text: "Get-Back Whips & Protection" }
+			],
+			'leather-apparel': [
+				{ value: 'leather-jackets', text: "Premium Leather Jackets" },
+				{ value: 'leather-vests', text: "Leather Vests & Concealed Carry" },
+				{ value: 'chaps-pants', text: "Naked Cowhide Chaps" },
+				{ value: 'gloves', text: "Leather Riding Gloves" },
+				{ value: 'belts', text: "Heavy Duty Leather Belts" }
+			],
+			'helmets-eyewear': [
+				{ value: 'dot-helmets', text: "DOT Motorcycle Helmets" },
+				{ value: 'sunglasses', text: "Riding Sunglasses" },
+				{ value: 'goggles', text: "Windproof Riding Goggles" },
+				{ value: 'facemasks', text: "Face Masks & Tubes" }
+			],
+			'pre-loved': [
+				{ value: 'vintage-jackets', text: "Pre-Loved Leather Jackets" },
+				{ value: 'vintage-vests', text: "Pre-Loved Vests" },
+				{ value: 'vintage-chaps', text: "Pre-Loved Chaps" },
+				{ value: 'collectibles', text: "Rare Biker Collectibles" }
+			],
+			'route-66': [
+				{ value: 'route66-apparel', text: "Route 66 Kingman Shirts" },
+				{ value: 'route66-hoodies', text: "Route 66 Hoodies & Hats" },
+				{ value: 'route66-signs', text: "Historic Signs & Decor" },
+				{ value: 'route66-stickers', text: "Route 66 Stickers & Pins" }
+			],
+			'services': [
+				{ value: 'leather-restoration', text: "Leather Cleaning & Restoration" },
+				{ value: 'leather-repair', text: "Leather Jacket & Vest Repair" },
+				{ value: 'patch-sewing', text: "Custom Patch Sewing" },
+				{ value: 'ccw-pocket', text: "Concealed Carry Pocket Install" },
+				{ value: 'strap-repair', text: "Nylon Strap Repair" }
+			]
+		};
+
+		var defaultOptions = $gearType.html();
+
+		$gearCategory.on('change', function() {
+			var cat = $(this).val();
+			if (cat && gearOptionsByCategory[cat]) {
+				var opts = '<option value="" disabled selected>Select Gear Type</option>';
+				gearOptionsByCategory[cat].forEach(function(item) {
+					opts += '<option value="' + item.value + '">' + item.text + '</option>';
+				});
+				$gearType.html(opts);
+			} else {
+				$gearType.html(defaultOptions);
+			}
+		});
+	}
+
 })(jQuery);
