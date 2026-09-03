@@ -428,4 +428,47 @@
 		});
 	}
 
+	/* Featured Products Auto Carousel JS */
+	if ($('.featured-product-slider').length) {
+		var featuredProductSwiper = new Swiper('.featured-product-slider', {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			loop: true,
+			speed: 800,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true
+			},
+			navigation: {
+				nextEl: '.featured-slider-next',
+				prevEl: '.featured-slider-prev'
+			},
+			pagination: {
+				el: '.featured-product-pagination',
+				clickable: true
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 15
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20
+				},
+				1200: {
+					slidesPerView: 4,
+					spaceBetween: 20
+				}
+			},
+			observer: true,
+			observeParents: true
+		});
+	}
+
 })(jQuery);
