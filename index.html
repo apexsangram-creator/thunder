@@ -840,55 +840,72 @@
               <div class="find-parts-box">
                 <!-- Find Parts Box Title Start -->
                 <div class="find-parts-box-title wow fadeInUp">
-                  <h2>Find Parts For Your Vehicle</h2>
+                  <h2>Find Gear For Your Ride</h2>
                 </div>
                 <!-- Find Parts Box Title End -->
 
                 <!-- Find Parts Form Start -->
                 <div class="find-parts-form wow fadeInUp" data-wow-delay="0.2s">
-                  <form id="findParts">
+                  <form id="findParts" action="products.html" method="GET">
                     <select
-                      name="manufacturer"
+                      name="category"
                       class="form-control form-select"
-                      id="manufacturer"
+                      id="gearCategory"
                       required=""
                     >
                       <option value="" disabled="" selected="">
-                        Select Manufacturer
+                        Select Category
                       </option>
-                      <option value="toyota">Toyota</option>
-                      <option value="hyundai">Hyundai</option>
-                      <option value="honda">Honda</option>
-                      <option value="tata">Tata</option>
+                      <option value="mens-gear">Men's Motorcycle Gear</option>
+                      <option value="womens-gear">Women's Motorcycle Gear</option>
+                      <option value="biker-accessories">Biker Accessories &amp; Jewelry</option>
+                      <option value="leather-apparel">Leather Jackets &amp; Vests</option>
+                      <option value="helmets-eyewear">Helmets &amp; Riding Eyewear</option>
+                      <option value="pre-loved">Pre-Loved Vintage Gear</option>
+                      <option value="route-66">Route 66 Collectibles</option>
+                      <option value="services">Leather Services &amp; Repair</option>
                     </select>
 
                     <select
-                      name="model"
+                      name="gear_type"
                       class="form-control form-select"
-                      id="model"
+                      id="gearType"
                       required=""
                     >
                       <option value="" disabled="" selected="">
-                        Select Model
+                        Select Gear Type
                       </option>
-                      <option value="fortuner">Fortuner</option>
-                      <option value="glanza">Glanza</option>
-                      <option value="camry">Camry</option>
+                      <option value="leather-jackets">Leather Jackets</option>
+                      <option value="leather-vests">Leather Vests &amp; Cuts</option>
+                      <option value="chaps-pants">Chaps &amp; Riding Pants</option>
+                      <option value="shirts-hoodies">T-Shirts &amp; Hoodies</option>
+                      <option value="helmets-headgear">DOT Helmets &amp; Head Gear</option>
+                      <option value="gloves-raingear">Riding Gloves &amp; Rain Gear</option>
+                      <option value="belts-buckles">Biker Belts &amp; Buckles</option>
+                      <option value="bags-luggage">Saddlebags &amp; Luggage</option>
+                      <option value="wallets-purses">Wallets &amp; CCW Purses</option>
+                      <option value="patches-bells">Patches, Pins &amp; Bells</option>
                     </select>
 
                     <select
-                      name="variant"
+                      name="size_style"
                       class="form-control form-select"
-                      id="variant"
+                      id="gearSize"
                       required=""
                     >
                       <option value="" disabled="" selected="">
-                        Select Variant
+                        Select Size / Style
                       </option>
-                      <option value="4x2_mt">4X2 MT</option>
-                      <option value="4x2_at">4x2 AT</option>
-                      <option value="4x4_mt">4x4 MT</option>
-                      <option value="4x4_at">4x4 AT</option>
+                      <option value="s">Small (S)</option>
+                      <option value="m">Medium (M)</option>
+                      <option value="l">Large (L)</option>
+                      <option value="xl">X-Large (XL)</option>
+                      <option value="2xl">2X-Large (2XL)</option>
+                      <option value="3xl">3X-Large (3XL)</option>
+                      <option value="4xl-5xl">4XL - 5XL Big &amp; Tall</option>
+                      <option value="cruiser-touring">Cruiser &amp; Touring</option>
+                      <option value="classic-route66">Route 66 Heritage</option>
+                      <option value="universal">Universal / All Sizes</option>
                     </select>
 
                     <div class="form-button">
