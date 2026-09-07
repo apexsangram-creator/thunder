@@ -569,4 +569,62 @@
 		setInterval(updateHotDealCountdown, 1000);
 	}
 
+	/* Route 66 Interactive Book-Reading Underline Effect */
+	document.querySelectorAll('.route66-reading-interactive').forEach(function (readingEl) {
+		const rawText = readingEl.innerText.trim();
+		if (!rawText) return;
+
+		// Split text into individual words, keeping trailing space inside each span for seamless connection
+		const words = rawText.split(/\s+/);
+		readingEl.innerHTML = words.map(function (w, i) {
+			const trailingSpace = (i < words.length - 1) ? ' ' : '';
+			return '<span class="read-word" data-idx="' + i + '">' + w + trailingSpace + '</span>';
+		}).join('');
+
+		const spans = Array.from(readingEl.querySelectorAll('.read-word'));
+		let lastIdx = -1;
+
+		readingEl.addEventListener('mousemove', function (e) {
+			let target = e.target.closest('.read-word');
+			if (!target) {
+				const mouseX = e.clientX;
+				const mouseY = e.clientY;
+				let closest = null;
+				let minDist = Infinity;
+				for (let i = 0; i < spans.length; i++) {
+					const rect = spans[i].getBoundingClientRect();
+					if (mouseY >= rect.top - 8 && mouseY <= rect.bottom + 8) {
+						const dist = Math.abs(mouseX - (rect.left + rect.width / 2));
+						if (dist < minDist) {
+							minDist = dist;
+							closest = spans[i];
+						}
+					}
+				}
+				target = closest;
+			}
+
+			if (target) {
+				const currentIdx = parseInt(target.getAttribute('data-idx'), 10);
+				if (currentIdx !== lastIdx) {
+					lastIdx = currentIdx;
+					for (let i = 0; i < spans.length; i++) {
+						if (i <= currentIdx) {
+							spans[i].classList.add('reading-active');
+						} else {
+							spans[i].classList.remove('reading-active');
+						}
+					}
+				}
+			}
+		});
+
+		readingEl.addEventListener('mouseleave', function () {
+			lastIdx = -1;
+			for (let i = 0; i < spans.length; i++) {
+				spans[i].classList.remove('reading-active');
+			}
+		});
+	});
+
 })(jQuery);

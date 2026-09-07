@@ -2265,37 +2265,87 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	object-fit: cover;
 }
 
-/* Route 66 Souvenirs Intro */
+/* Route 66 Souvenirs Intro - Clean Spacious Typography */
 .route66-souvenirs-intro{
-	padding: 20px 0 35px;
+	padding: 40px 0 25px;
+	position: relative;
 }
 
-.route66-souvenirs-intro .section-row{
-	margin-bottom: 0;
+.route66-intro-content{
+	max-width: 800px;
+	margin: 24px auto 0;
+	text-align: center;
 }
 
-.route66-souvenirs-intro .section-title.section-title-center{
-	max-width: 820px;
-	margin: 0 auto;
+.route66-lead-text{
+	font-size: 18.5px;
+	line-height: 1.85em;
+	color: #1F242E;
+	font-weight: 500;
+	margin-bottom: 18px;
+	letter-spacing: 0.15px;
 }
 
-.route66-souvenirs-intro .section-title p{
+.route66-lead-text em{
+	font-style: italic;
+	color: #B45309;
+}
+
+.route66-body-text{
 	font-size: 15.5px;
-	line-height: 1.75em;
-	color: #646464;
-	margin-top: 18px;
+	line-height: 2.25em;
+	color: #5A6270;
+	font-weight: 400;
+	margin: 0;
+	letter-spacing: 0.2px;
 }
 
-.route66-souvenirs-intro .section-title p a{
-	color: #FFB120;
+.route66-reading-interactive{
+	user-select: text;
+	cursor: default;
+}
+
+.route66-reading-interactive .read-word{
+	display: inline;
+	white-space: pre-wrap;
+	position: relative;
+	padding-bottom: 6px;
+	background-image: linear-gradient(to right, #FFB120, #FFB120);
+	background-repeat: no-repeat;
+	background-position: left bottom 0px;
+	background-size: 0% 2.5px;
+	transition: background-size 0.2s cubic-bezier(0.2, 0.8, 0.35, 1), color 0.15s ease;
+}
+
+.route66-reading-interactive .read-word.reading-active{
+	color: #0F131A;
+	background-size: 100% 2.5px;
+}
+
+.route66-intro-content a{
+	color: #D97706;
 	font-weight: 700;
 	text-decoration: underline;
-	text-underline-offset: 3px;
+	text-underline-offset: 4px;
 	transition: color 0.25s ease;
 }
 
-.route66-souvenirs-intro .section-title p a:hover{
-	color: var(--primary-color);
+.route66-intro-content a:hover{
+	color: #000000;
+}
+
+@media (max-width: 768px){
+	.route66-souvenirs-intro{
+		padding: 25px 0 15px;
+	}
+	.route66-lead-text{
+		font-size: 17px;
+		line-height: 1.75em;
+	}
+	.route66-body-text{
+		font-size: 14.5px;
+		line-height: 1.85em;
+	}
 }
 
 /************************************/
