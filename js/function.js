@@ -471,29 +471,160 @@
 		});
 	}
 
-	/* Showcase Video Player Interaction */
-	const showcaseVideo = document.getElementById('showcaseVideoPlayer');
-	const showcasePlayBtn = document.getElementById('showcasePlayBtn');
+	/* Hot Deals Auto-scrolling Swiper JS */
+	if ($('.hotdeals-slider').length) {
+		var hotDealsSwiper = new Swiper('.hotdeals-slider', {
+			slidesPerView: 2,
+			spaceBetween: 14,
+			loop: true,
+			speed: 800,
+			autoplay: {
+				delay: 2400,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true
+			},
+			navigation: {
+				nextEl: '.hotdeal-next',
+				prevEl: '.hotdeal-prev'
+			},
+			breakpoints: {
+				0: {
+					direction: 'horizontal',
+					slidesPerView: 1.15,
+					spaceBetween: 12
+				},
+				576: {
+					direction: 'horizontal',
+					slidesPerView: 1.5,
+					spaceBetween: 14
+				},
+				992: {
+					direction: 'vertical',
+					slidesPerView: 2,
+					spaceBetween: 14
+				}
+			},
+			observer: true,
+			observeParents: true
+		});
+	}
 
-	if (showcaseVideo && showcasePlayBtn) {
-		showcasePlayBtn.addEventListener('click', function () {
-			if (showcaseVideo.paused) {
-				showcaseVideo.play();
-				showcasePlayBtn.classList.add('is-playing');
+	/* Auto-playing Showcase Video & Audio Toggle */
+	const autoVideo = document.getElementById('autoShowcaseVideo');
+	const soundBtn = document.getElementById('videoSoundToggle');
+	const soundIcon = document.getElementById('soundIcon');
+	const soundText = document.getElementById('soundText');
+
+	if (autoVideo) {
+		autoVideo.muted = true;
+		const playPromise = autoVideo.play();
+		if (playPromise !== undefined) {
+			playPromise.catch(function () {
+				// Autoplay fallback with muted attribute
+				autoVideo.muted = true;
+				autoVideo.play();
+			});
+		}
+
+		if (soundBtn) {
+			soundBtn.addEventListener('click', function () {
+				if (autoVideo.muted) {
+					autoVideo.muted = false;
+					if (soundIcon) {
+						soundIcon.className = 'fa-solid fa-volume-high';
+					}
+					if (soundText) {
+						soundText.textContent = 'Sound On';
+					}
+					soundBtn.classList.add('is-unmuted');
+				} else {
+					autoVideo.muted = true;
+					if (soundIcon) {
+						soundIcon.className = 'fa-solid fa-volume-xmark';
+					}
+					if (soundText) {
+						soundText.textContent = 'Muted';
+					}
+					soundBtn.classList.remove('is-unmuted');
+				}
+			});
+		}
+	}
+
+	/* Hot Deals 24h Countdown Timer */
+	const dealCountdownEl = document.getElementById('dealCountdown');
+	if (dealCountdownEl) {
+		function updateHotDealCountdown() {
+			const now = new Date();
+			const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+			const diff = Math.max(0, endOfDay - now);
+			const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+			const minutes = Math.floor((diff / (1000 * 60)) % 60);
+			const seconds = Math.floor((diff / 1000) % 60);
+
+			const pad = function (n) { return n.toString().padStart(2, '0'); };
+			dealCountdownEl.textContent = pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+		}
+		updateHotDealCountdown();
+		setInterval(updateHotDealCountdown, 1000);
+	}
+
+	/* Route 66 Interactive Book-Reading Underline Effect */
+	document.querySelectorAll('.route66-reading-interactive').forEach(function (readingEl) {
+		const rawText = readingEl.innerText.trim();
+		if (!rawText) return;
+
+		// Split text into individual words, keeping trailing space inside each span for seamless connection
+		const words = rawText.split(/\s+/);
+		readingEl.innerHTML = words.map(function (w, i) {
+			const trailingSpace = (i < words.length - 1) ? ' ' : '';
+			return '<span class="read-word" data-idx="' + i + '">' + w + trailingSpace + '</span>';
+		}).join('');
+
+		const spans = Array.from(readingEl.querySelectorAll('.read-word'));
+		let lastIdx = -1;
+
+		readingEl.addEventListener('mousemove', function (e) {
+			let target = e.target.closest('.read-word');
+			if (!target) {
+				const mouseX = e.clientX;
+				const mouseY = e.clientY;
+				let closest = null;
+				let minDist = Infinity;
+				for (let i = 0; i < spans.length; i++) {
+					const rect = spans[i].getBoundingClientRect();
+					if (mouseY >= rect.top - 8 && mouseY <= rect.bottom + 8) {
+						const dist = Math.abs(mouseX - (rect.left + rect.width / 2));
+						if (dist < minDist) {
+							minDist = dist;
+							closest = spans[i];
+						}
+					}
+				}
+				target = closest;
+			}
+
+			if (target) {
+				const currentIdx = parseInt(target.getAttribute('data-idx'), 10);
+				if (currentIdx !== lastIdx) {
+					lastIdx = currentIdx;
+					for (let i = 0; i < spans.length; i++) {
+						if (i <= currentIdx) {
+							spans[i].classList.add('reading-active');
+						} else {
+							spans[i].classList.remove('reading-active');
+						}
+					}
+				}
 			}
 		});
 
-		showcaseVideo.addEventListener('play', function () {
-			showcasePlayBtn.classList.add('is-playing');
+		readingEl.addEventListener('mouseleave', function () {
+			lastIdx = -1;
+			for (let i = 0; i < spans.length; i++) {
+				spans[i].classList.remove('reading-active');
+			}
 		});
-
-		showcaseVideo.addEventListener('pause', function () {
-			showcasePlayBtn.classList.remove('is-playing');
-		});
-
-		showcaseVideo.addEventListener('ended', function () {
-			showcasePlayBtn.classList.remove('is-playing');
-		});
-	}
+	});
 
 })(jQuery);
