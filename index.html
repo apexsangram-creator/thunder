@@ -1025,6 +1025,352 @@
     </div>
     <!-- Google Reviews Marquee End -->
 
+    <!-- Video & Hot Deals Dual Section Start -->
+    <div class="video-hotdeals-section dark-section">
+      <div class="container">
+        <!-- Section Row Header -->
+        <div class="row section-row align-items-center mb-4">
+          <div class="col-lg-7">
+            <div class="section-title">
+              <span class="section-sub-title wow fadeInUp">Ride &amp; Save</span>
+              <h2 class="text-anime-style-3" data-cursor="-opaque">
+                Experience The Road &amp; Hot Deals
+              </h2>
+            </div>
+          </div>
+          <div class="col-lg-5 text-lg-end d-none d-lg-block">
+            <div class="video-deals-quick-badge wow fadeInUp" data-wow-delay="0.2s">
+              <span class="live-dot-pulse"></span>
+              <span>Authentic Route 66 Gear • Limited Daily Specials</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Left Column: Auto-Playing Video -->
+          <div class="col-lg-7 col-xl-7">
+            <div class="video-showcase-box wow fadeInLeft" data-wow-delay="0.2s">
+              <div class="video-container">
+                <video
+                  id="autoShowcaseVideo"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="auto"
+                  poster="images/thunder-rode-video-thumbnail.jpg"
+                >
+                  <source src="video/motorcycle-web.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+
+                <!-- Top Badges Overlay -->
+                <div class="video-top-overlay">
+                  <span class="video-live-pill">
+                    <span class="pulse-indicator"></span>
+                    Live In Motion
+                  </span>
+                  <button
+                    type="button"
+                    class="video-sound-btn"
+                    id="videoSoundToggle"
+                    aria-label="Toggle Sound"
+                    title="Click to toggle sound"
+                  >
+                    <i class="fa-solid fa-volume-xmark" id="soundIcon"></i>
+                    <span id="soundText">Muted</span>
+                  </button>
+                </div>
+
+                <!-- Bottom Glass Overlay -->
+                <div class="video-bottom-caption">
+                  <div class="caption-inner">
+                    <span class="caption-tag"><i class="fa-solid fa-location-dot"></i> Historic Route 66 • Kingman, AZ</span>
+                    <h3>Feel The Thunder, Gear Up For The Ride</h3>
+                    <p>Heavy-duty cowhide leathers, DOT helmets &amp; accessories tested on the highway.</p>
+                  </div>
+                  <a href="products.html" class="video-cta-pill">
+                    <span>Shop All Gear</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Hot Deals Auto-Scrolling -->
+          <div class="col-lg-5 col-xl-5">
+            <div class="hotdeals-card-wrapper wow fadeInRight" data-wow-delay="0.3s">
+              <!-- Hot Deals Header -->
+              <div class="hotdeals-header">
+                <div class="hotdeals-title-area">
+                  <div class="hotdeals-fire-badge">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <span>Hot Deals</span>
+                  </div>
+                  <h3 class="hotdeals-heading">Limited Time Offers</h3>
+                </div>
+                <!-- Countdown & Controls -->
+                <div class="hotdeals-controls">
+                  <div class="deal-countdown-box" title="Deals reset every 24 hours">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="countdown-text" id="dealCountdown">09:45:22</span>
+                  </div>
+                  <div class="hotdeals-nav-btns">
+                    <button class="hotdeal-nav-btn hotdeal-prev" aria-label="Previous Deal">
+                      <i class="fa-solid fa-chevron-up"></i>
+                    </button>
+                    <button class="hotdeal-nav-btn hotdeal-next" aria-label="Next Deal">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hot Deals Auto-Scrolling Slider -->
+              <div class="hotdeals-slider-container">
+                <div class="swiper hotdeals-slider">
+                  <div class="swiper-wrapper">
+                    <!-- Deal Item 1 -->
+                    <div class="swiper-slide">
+                      <div class="hotdeal-item">
+                        <div class="hotdeal-img-box">
+                          <img src="images/jj.png" alt="Route 66 Armored Riding Jacket" />
+                          <span class="hotdeal-discount-badge">-30%</span>
+                        </div>
+                        <div class="hotdeal-info">
+                          <div class="hotdeal-rating">
+                            <div class="stars">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="rating-count">(42 reviews)</span>
+                          </div>
+                          <h4 class="hotdeal-name">
+                            <a href="product-single.html">Route 66 Armored Riding Jacket</a>
+                          </h4>
+                          <div class="hotdeal-pricing">
+                            <span class="price-current">$189.99</span>
+                            <span class="price-original">$269.99</span>
+                          </div>
+                          <div class="hotdeal-stock-bar">
+                            <div class="stock-progress" style="width: 78%;"></div>
+                            <span class="stock-text">🔥 Only 4 left in stock</span>
+                          </div>
+                          <a href="product-single.html" class="hotdeal-claim-btn">
+                            <span>Claim Deal</span>
+                            <i class="fa-solid fa-bolt"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Deal Item 2 -->
+                    <div class="swiper-slide">
+                      <div class="hotdeal-item">
+                        <div class="hotdeal-img-box">
+                          <img src="images/helm.png" alt="Blacktop Full-Face Motorcycle Helmet" />
+                          <span class="hotdeal-discount-badge">-25%</span>
+                        </div>
+                        <div class="hotdeal-info">
+                          <div class="hotdeal-rating">
+                            <div class="stars">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <span class="rating-count">(67 reviews)</span>
+                          </div>
+                          <h4 class="hotdeal-name">
+                            <a href="product-single.html">Blacktop Full-Face Helmet</a>
+                          </h4>
+                          <div class="hotdeal-pricing">
+                            <span class="price-current">$149.99</span>
+                            <span class="price-original">$199.99</span>
+                          </div>
+                          <div class="hotdeal-stock-bar">
+                            <div class="stock-progress" style="width: 65%;"></div>
+                            <span class="stock-text">🔥 16 sold in last 24h</span>
+                          </div>
+                          <a href="product-single.html" class="hotdeal-claim-btn">
+                            <span>Claim Deal</span>
+                            <i class="fa-solid fa-bolt"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Deal Item 3 -->
+                    <div class="swiper-slide">
+                      <div class="hotdeal-item">
+                        <div class="hotdeal-img-box">
+                          <img src="images/glove.png" alt="Road Warrior Leather Riding Gloves" />
+                          <span class="hotdeal-discount-badge">-38%</span>
+                        </div>
+                        <div class="hotdeal-info">
+                          <div class="hotdeal-rating">
+                            <div class="stars">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="rating-count">(95 reviews)</span>
+                          </div>
+                          <h4 class="hotdeal-name">
+                            <a href="product-single.html">Road Warrior Leather Gloves</a>
+                          </h4>
+                          <div class="hotdeal-pricing">
+                            <span class="price-current">$49.99</span>
+                            <span class="price-original">$79.99</span>
+                          </div>
+                          <div class="hotdeal-stock-bar">
+                            <div class="stock-progress" style="width: 88%;"></div>
+                            <span class="stock-text">🔥 High demand - 8 left</span>
+                          </div>
+                          <a href="product-single.html" class="hotdeal-claim-btn">
+                            <span>Claim Deal</span>
+                            <i class="fa-solid fa-bolt"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Deal Item 4 -->
+                    <div class="swiper-slide">
+                      <div class="hotdeal-item">
+                        <div class="hotdeal-img-box">
+                          <img src="images/shoe.png" alt="Highway Renegade Riding Boots" />
+                          <span class="hotdeal-discount-badge">-27%</span>
+                        </div>
+                        <div class="hotdeal-info">
+                          <div class="hotdeal-rating">
+                            <div class="stars">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="rating-count">(34 reviews)</span>
+                          </div>
+                          <h4 class="hotdeal-name">
+                            <a href="product-single.html">Highway Renegade Riding Boots</a>
+                          </h4>
+                          <div class="hotdeal-pricing">
+                            <span class="price-current">$159.99</span>
+                            <span class="price-original">$219.99</span>
+                          </div>
+                          <div class="hotdeal-stock-bar">
+                            <div class="stock-progress" style="width: 52%;"></div>
+                            <span class="stock-text">🔥 Almost gone - 3 left</span>
+                          </div>
+                          <a href="product-single.html" class="hotdeal-claim-btn">
+                            <span>Claim Deal</span>
+                            <i class="fa-solid fa-bolt"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Deal Item 5 -->
+                    <div class="swiper-slide">
+                      <div class="hotdeal-item">
+                        <div class="hotdeal-img-box">
+                          <img src="images/ultra-pistol-pete-leather-jacket-1.png" alt="Pistol Pete Naked Cowhide Jacket" />
+                          <span class="hotdeal-discount-badge">-20%</span>
+                        </div>
+                        <div class="hotdeal-info">
+                          <div class="hotdeal-rating">
+                            <div class="stars">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="rating-count">(51 reviews)</span>
+                          </div>
+                          <h4 class="hotdeal-name">
+                            <a href="product-single.html">Pistol Pete Cowhide Jacket</a>
+                          </h4>
+                          <div class="hotdeal-pricing">
+                            <span class="price-current">$279.99</span>
+                            <span class="price-original">$349.99</span>
+                          </div>
+                          <div class="hotdeal-stock-bar">
+                            <div class="stock-progress" style="width: 70%;"></div>
+                            <span class="stock-text">🔥 Special Biker Edition</span>
+                          </div>
+                          <a href="product-single.html" class="hotdeal-claim-btn">
+                            <span>Claim Deal</span>
+                            <i class="fa-solid fa-bolt"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Deal Item 6 -->
+                    <div class="swiper-slide">
+                      <div class="hotdeal-item">
+                        <div class="hotdeal-img-box">
+                          <img src="images/Leather USA Flag Bomber Jacket.png" alt="Leather USA Flag Bomber Jacket" />
+                          <span class="hotdeal-discount-badge">-28%</span>
+                        </div>
+                        <div class="hotdeal-info">
+                          <div class="hotdeal-rating">
+                            <div class="stars">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <span class="rating-count">(39 reviews)</span>
+                          </div>
+                          <h4 class="hotdeal-name">
+                            <a href="product-single.html">Leather USA Flag Bomber Jacket</a>
+                          </h4>
+                          <div class="hotdeal-pricing">
+                            <span class="price-current">$229.99</span>
+                            <span class="price-original">$319.99</span>
+                          </div>
+                          <div class="hotdeal-stock-bar">
+                            <div class="stock-progress" style="width: 82%;"></div>
+                            <span class="stock-text">🔥 Limited Edition</span>
+                          </div>
+                          <a href="product-single.html" class="hotdeal-claim-btn">
+                            <span>Claim Deal</span>
+                            <i class="fa-solid fa-bolt"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hot Deals Footer Note -->
+              <div class="hotdeals-footer">
+                <a href="products.html" class="hotdeals-view-all">
+                  <span>View All Deals</span>
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                </a>
+                <span class="hotdeals-note"><i class="fa-solid fa-truck-fast"></i> Free US Shipping over $99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Video & Hot Deals Dual Section End -->
+
     <!-- Featured Product Section Start -->
     <div class="featured-products">
       <div class="container">
@@ -1652,98 +1998,7 @@
     </div>
     <!-- Latest Updates Section End -->
 
-    <!-- Video Showcase Section Start -->
-    <div class="video-showcase-section">
-      <div class="container">
-        <div class="row section-row">
-          <div class="col-lg-12">
-            <!-- Section Title Start -->
-            <div class="section-title section-title-center">
-              <span class="section-sub-title wow fadeInUp">Experience Thunder-Rode</span>
-              <h2 class="text-anime-style-3" data-cursor="-opaque">
-                Feel The Thunder On Historic Route 66
-              </h2>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">
-                Kingman, Arizona is the heart of the Mother Road. Watch our genuine motorcycle gear in motion and see why riders across the nation trust Thunder-Rode for the open road.
-              </p>
-            </div>
-            <!-- Section Title End -->
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- Video Player Box Start -->
-            <div class="video-showcase-wrapper wow fadeInUp" data-wow-delay="0.3s">
-              <div class="video-showcase-player-box">
-                <video
-                  id="showcaseVideoPlayer"
-                  controls
-                  preload="metadata"
-                  playsinline
-                  poster="images/thunder-rode-video-thumbnail.jpg"
-                >
-                  <source src="video/motorcycle-web.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                <button
-                  type="button"
-                  class="showcase-play-trigger"
-                  id="showcasePlayBtn"
-                  aria-label="Play Video"
-                >
-                  <span class="play-icon-ring">
-                    <i class="fa-solid fa-play"></i>
-                  </span>
-                  <span class="play-label">Watch Full Ride</span>
-                </button>
-              </div>
-
-              <!-- Feature Highlights Under Video -->
-              <div class="video-showcase-features">
-                <div class="video-feature-card">
-                  <div class="feature-icon">
-                    <i class="fa-solid fa-motorcycle"></i>
-                  </div>
-                  <div class="feature-text">
-                    <h4>Genuine Biker Gear</h4>
-                    <p>Heavy-duty leather jackets, vests &amp; riding apparel built for protection.</p>
-                  </div>
-                </div>
-
-                <div class="video-feature-card">
-                  <div class="feature-icon">
-                    <i class="fa-solid fa-shield-halved"></i>
-                  </div>
-                  <div class="feature-text">
-                    <h4>DOT Certified Safety</h4>
-                    <p>DOT-approved helmets, goggles &amp; eyewear tested for open highway speeds.</p>
-                  </div>
-                </div>
-
-                <div class="video-feature-card">
-                  <div class="feature-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                  </div>
-                  <div class="feature-text">
-                    <h4>Route 66 Kingman, AZ</h4>
-                    <p>Family-owned, biker-operated roadside flagship open seven days a week.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Action Buttons -->
-              <div class="video-showcase-actions">
-                <a href="products.html" class="btn-default btn-highlighted">Shop Motorcycle Gear</a>
-                <a href="contact.html" class="btn-default btn-border">Visit Our Kingman Store</a>
-              </div>
-            </div>
-            <!-- Video Player Box End -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Video Showcase Section End -->
 
     <!-- Our Product Section Start -->
     <div class="our-products">

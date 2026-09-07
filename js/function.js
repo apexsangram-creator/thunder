@@ -471,29 +471,102 @@
 		});
 	}
 
-	/* Showcase Video Player Interaction */
-	const showcaseVideo = document.getElementById('showcaseVideoPlayer');
-	const showcasePlayBtn = document.getElementById('showcasePlayBtn');
-
-	if (showcaseVideo && showcasePlayBtn) {
-		showcasePlayBtn.addEventListener('click', function () {
-			if (showcaseVideo.paused) {
-				showcaseVideo.play();
-				showcasePlayBtn.classList.add('is-playing');
-			}
+	/* Hot Deals Auto-scrolling Swiper JS */
+	if ($('.hotdeals-slider').length) {
+		var hotDealsSwiper = new Swiper('.hotdeals-slider', {
+			slidesPerView: 2,
+			spaceBetween: 14,
+			loop: true,
+			speed: 800,
+			autoplay: {
+				delay: 2400,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true
+			},
+			navigation: {
+				nextEl: '.hotdeal-next',
+				prevEl: '.hotdeal-prev'
+			},
+			breakpoints: {
+				0: {
+					direction: 'horizontal',
+					slidesPerView: 1.15,
+					spaceBetween: 12
+				},
+				576: {
+					direction: 'horizontal',
+					slidesPerView: 1.5,
+					spaceBetween: 14
+				},
+				992: {
+					direction: 'vertical',
+					slidesPerView: 2,
+					spaceBetween: 14
+				}
+			},
+			observer: true,
+			observeParents: true
 		});
+	}
 
-		showcaseVideo.addEventListener('play', function () {
-			showcasePlayBtn.classList.add('is-playing');
-		});
+	/* Auto-playing Showcase Video & Audio Toggle */
+	const autoVideo = document.getElementById('autoShowcaseVideo');
+	const soundBtn = document.getElementById('videoSoundToggle');
+	const soundIcon = document.getElementById('soundIcon');
+	const soundText = document.getElementById('soundText');
 
-		showcaseVideo.addEventListener('pause', function () {
-			showcasePlayBtn.classList.remove('is-playing');
-		});
+	if (autoVideo) {
+		autoVideo.muted = true;
+		const playPromise = autoVideo.play();
+		if (playPromise !== undefined) {
+			playPromise.catch(function () {
+				// Autoplay fallback with muted attribute
+				autoVideo.muted = true;
+				autoVideo.play();
+			});
+		}
 
-		showcaseVideo.addEventListener('ended', function () {
-			showcasePlayBtn.classList.remove('is-playing');
-		});
+		if (soundBtn) {
+			soundBtn.addEventListener('click', function () {
+				if (autoVideo.muted) {
+					autoVideo.muted = false;
+					if (soundIcon) {
+						soundIcon.className = 'fa-solid fa-volume-high';
+					}
+					if (soundText) {
+						soundText.textContent = 'Sound On';
+					}
+					soundBtn.classList.add('is-unmuted');
+				} else {
+					autoVideo.muted = true;
+					if (soundIcon) {
+						soundIcon.className = 'fa-solid fa-volume-xmark';
+					}
+					if (soundText) {
+						soundText.textContent = 'Muted';
+					}
+					soundBtn.classList.remove('is-unmuted');
+				}
+			});
+		}
+	}
+
+	/* Hot Deals 24h Countdown Timer */
+	const dealCountdownEl = document.getElementById('dealCountdown');
+	if (dealCountdownEl) {
+		function updateHotDealCountdown() {
+			const now = new Date();
+			const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+			const diff = Math.max(0, endOfDay - now);
+			const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+			const minutes = Math.floor((diff / (1000 * 60)) % 60);
+			const seconds = Math.floor((diff / 1000) % 60);
+
+			const pad = function (n) { return n.toString().padStart(2, '0'); };
+			dealCountdownEl.textContent = pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+		}
+		updateHotDealCountdown();
+		setInterval(updateHotDealCountdown, 1000);
 	}
 
 })(jQuery);
