@@ -454,6 +454,7 @@ a:focus{
 	margin-bottom: 0; 
 }
 
+.section-title.section-title-center,
 .section-row .section-title.section-title-center{
 	width: 100%;
 	max-width: 700px;
@@ -1894,10 +1895,31 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	color: #B4BCC8;
 }
 
+/* Hero Trust & Quote Stack */
+.hero-trust-quote-wrap{
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	margin-top: 24px;
+	margin-bottom: 0;
+	width: fit-content;
+}
+
+.hero-trust-quote-wrap .hero-quote-badge{
+	margin: 0 !important;
+}
+
+.hero-trust-quote-wrap .hero-google-trust-badge{
+	margin: 0 !important;
+}
+
 /* Hero Google Rating Trust Badge (Compact) */
 .hero-google-trust-badge{
 	display: inline-flex;
 	flex-direction: column;
+	align-items: center;
+	text-align: center;
 	gap: 3px;
 	margin-top: 14px;
 	margin-bottom: 0;
@@ -1943,6 +1965,7 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 .hero-google-trust-badge .trust-badge-header{
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	gap: 10px;
 }
 
@@ -2514,6 +2537,15 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 .route66-souvenirs-intro{
 	padding: 40px 0 25px;
 	position: relative;
+}
+
+.route66-souvenirs-intro .section-title{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.route66-souvenirs-intro .section-row{
+	margin-bottom: 24px;
 }
 
 .route66-intro-content{
