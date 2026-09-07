@@ -1894,13 +1894,130 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	color: #B4BCC8;
 }
 
+/* Hero Google Rating Trust Badge (Compact) */
+.hero-google-trust-badge{
+	display: inline-flex;
+	flex-direction: column;
+	gap: 3px;
+	margin-top: 14px;
+	margin-bottom: 0;
+	padding: 7px 15px;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 40%, rgba(13, 15, 18, 0.75) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.13);
+	border-radius: 12px;
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+	position: relative;
+	overflow: hidden;
+	transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+	width: fit-content;
+	max-width: 100%;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.hero-google-trust-badge::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -120%;
+	width: 60%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+	transform: skewX(-20deg);
+	transition: 0.75s ease;
+	pointer-events: none;
+}
+
+.hero-google-trust-badge:hover::after{
+	left: 160%;
+}
+
+.hero-google-trust-badge:hover{
+	border-color: rgba(251, 188, 4, 0.45);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 18px rgba(251, 188, 4, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+	transform: translateY(-2px);
+}
+
+.hero-google-trust-badge .trust-badge-header{
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.hero-google-trust-badge .google-brand-wrap{
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.hero-google-trust-badge .google-brand-wrap .google-g-icon{
+	width: 17px;
+	height: 17px;
+	filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
+}
+
+.hero-google-trust-badge .google-brand-wrap .google-text{
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	color: #FFFFFF;
+	letter-spacing: -0.2px;
+	line-height: 1;
+}
+
+.hero-google-trust-badge .trust-badge-stars{
+	display: inline-flex;
+	align-items: center;
+	gap: 2.5px;
+	color: #FBBC04;
+	font-size: 13px;
+	filter: drop-shadow(0 0 4px rgba(251, 188, 4, 0.45));
+}
+
+.hero-google-trust-badge .trust-badge-stars i{
+	transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-google-trust-badge:hover .trust-badge-stars i{
+	transform: scale(1.1);
+}
+
+.hero-google-trust-badge .trust-badge-text{
+	font-family: 'Inter', sans-serif;
+	font-size: 12px;
+	color: #CBD5E1;
+	font-weight: 400;
+	letter-spacing: 0.1px;
+	line-height: 1.3;
+	white-space: nowrap;
+}
+
+.hero-google-trust-badge .trust-badge-text .rating-bold{
+	font-weight: 700;
+	color: #FFFFFF;
+}
+
+.hero-google-trust-badge .trust-badge-text .review-count-bold{
+	font-weight: 700;
+	color: #FFFFFF;
+}
+
 /* Hero Quote Modern Highlight Badge */
+.hero-quote-bottom{
+	margin-top: 24px;
+	display: block;
+	width: 100%;
+}
+
+.hero-quote-bottom .hero-quote-badge,
 .dark-section .hero-content .section-title p.hero-quote-badge,
 .hero-content .section-title p.hero-quote-badge{
 	display: inline-flex;
 	align-items: center;
 	gap: 12px;
-	margin-top: 24px;
+	margin-top: 0;
 	margin-bottom: 0;
 	padding: 9px 22px 9px 15px;
 	background: linear-gradient(135deg, rgba(255, 177, 32, 0.12) 0%, rgba(255, 255, 255, 0.04) 40%, rgba(13, 15, 18, 0.75) 100%);
@@ -1919,6 +2036,7 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 	max-width: 100%;
 }
 
+.hero-quote-bottom .hero-quote-badge:hover,
 .dark-section .hero-content .section-title p.hero-quote-badge:hover,
 .hero-content .section-title p.hero-quote-badge:hover{
 	border-color: rgba(255, 177, 32, 0.65);
@@ -1957,10 +2075,35 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 }
 
 @media (max-width: 767px){
+	.hero-google-trust-badge{
+		padding: 6px 12px;
+		gap: 2px;
+		margin-top: 12px;
+		margin-bottom: 0;
+	}
+	.hero-google-trust-badge .google-brand-wrap .google-g-icon{
+		width: 15px;
+		height: 15px;
+	}
+	.hero-google-trust-badge .google-brand-wrap .google-text{
+		font-size: 14px;
+	}
+	.hero-google-trust-badge .trust-badge-stars{
+		font-size: 12px;
+		gap: 2px;
+	}
+	.hero-google-trust-badge .trust-badge-text{
+		font-size: 11px;
+	}
+	.hero-quote-bottom{
+		margin-top: 18px;
+	}
+	.hero-quote-bottom .hero-quote-badge,
 	.hero-content .section-title p.hero-quote-badge{
 		font-size: 14px;
 		padding: 7px 16px 7px 12px;
 		gap: 9px;
+		margin-top: 0;
 	}
 	.hero-quote-badge .badge-bolt{
 		width: 24px;
@@ -3090,12 +3233,12 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 .google-reviews-marquee-bar{
 	background: #0D0F12;
 	border-top: 1px solid rgba(255, 255, 255, 0.08);
-	border-bottom: 2px solid #FFB120;
-	padding: 12px 0;
+	border-bottom: 3px solid #FFB120;
+	padding: 22px 0;
 	overflow: hidden;
 	position: relative;
 	z-index: 5;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 2px 10px rgba(255, 177, 32, 0.15);
 }
 
 .google-reviews-marquee-bar .marquee-track{
@@ -3111,15 +3254,15 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 .google-reviews-marquee-bar .marquee-content{
 	display: flex;
 	align-items: center;
-	gap: 32px;
-	padding-right: 32px;
+	gap: 48px;
+	padding-right: 48px;
 	flex-shrink: 0;
 }
 
 .review-marquee-badge{
 	display: inline-flex;
 	align-items: center;
-	gap: 12px;
+	gap: 16px;
 	white-space: nowrap;
 	user-select: none;
 }
@@ -3127,18 +3270,18 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 .google-brand-wrap{
 	display: inline-flex;
 	align-items: center;
-	gap: 6px;
+	gap: 8px;
 }
 
 .google-brand-wrap .google-g-icon{
-	width: 20px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
 	flex-shrink: 0;
 }
 
 .google-brand-wrap .google-text{
 	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
 	color: #FFFFFF;
 	letter-spacing: -0.2px;
@@ -3147,17 +3290,19 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 .review-stars-wrap{
 	display: inline-flex;
 	align-items: center;
-	gap: 3px;
+	gap: 4px;
 	color: #FFA41C;
-	font-size: 14px;
+	font-size: 16px;
+	filter: drop-shadow(0 0 5px rgba(255, 164, 28, 0.45));
 }
 
 .review-rating-text{
 	font-family: 'Inter', sans-serif;
-	font-size: 14.5px;
+	font-size: 16.5px;
 	color: #E4E4E7;
 	font-weight: 400;
 	white-space: nowrap;
+	letter-spacing: 0.15px;
 }
 
 .review-rating-text strong{
@@ -3167,8 +3312,8 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 
 .marquee-pill-divider{
 	color: #FFB120;
-	font-size: 10px;
-	opacity: 0.6;
+	font-size: 12px;
+	opacity: 0.7;
 }
 
 @keyframes googleMarqueeScroll{
@@ -3182,16 +3327,24 @@ header.main-header .header-sticky.active .main-menu .nav-menu-wrapper > ul{
 
 @media (max-width: 767px){
 	.google-reviews-marquee-bar{
-		padding: 10px 0;
+		padding: 16px 0;
 	}
 	.review-rating-text{
-		font-size: 13px;
+		font-size: 14.5px;
 	}
 	.google-brand-wrap .google-text{
-		font-size: 14px;
+		font-size: 16px;
+	}
+	.google-brand-wrap .google-g-icon{
+		width: 20px;
+		height: 20px;
 	}
 	.review-stars-wrap{
-		font-size: 12px;
+		font-size: 14px;
+	}
+	.google-reviews-marquee-bar .marquee-content{
+		gap: 32px;
+		padding-right: 32px;
 	}
 }
 
